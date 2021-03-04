@@ -52,9 +52,9 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"stylesheet\" href=\"/public/css/bootstrap.min.css\">
+        <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
         <link rel=\"stylesheet\" href=\"https://pro.fontawesome.com/releases/v5.10.0/css/all.css\" integrity=\"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p\" crossorigin=\"anonymous\"/>
-        <link rel=\"stylesheet\" href=\"/public/css/app.css\">
+        <link rel=\"stylesheet\" href=\"/css/app.css\">
 ";
         // line 10
         echo "        ";
@@ -210,9 +210,9 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
     <head>
         <meta charset=\"UTF-8\">
         <title>LineBnB - {% block title %} {% endblock %}</title>
-        <link rel=\"stylesheet\" href=\"/public/css/bootstrap.min.css\">
+        <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
         <link rel=\"stylesheet\" href=\"https://pro.fontawesome.com/releases/v5.10.0/css/all.css\" integrity=\"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p\" crossorigin=\"anonymous\"/>
-        <link rel=\"stylesheet\" href=\"/public/css/app.css\">
+        <link rel=\"stylesheet\" href=\"/css/app.css\">
 {#         <link rel=\"stylesheet\" href=\"{{asset('build/css/app.css')}}\"> #}
         {% block stylesheets %}
         {% endblock %}
@@ -245,6 +245,6 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
 
        
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/lineup/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/base.html.twig");
     }
 }

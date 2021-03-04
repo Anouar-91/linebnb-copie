@@ -85,7 +85,7 @@ class AppFixtures extends Fixture
             
             $title = $faker->sentence();
           
-            $coverImage = "/public/img/chambres/ch-". rand(1, 20) .".jpg"; 
+            $coverImage = "/img/chambres/ch-". rand(1, 20) .".jpg"; 
             $introduction = $faker->paragraph(2);
             $content = '<p>' . join('<p><p/>' , $faker->paragraphs(5)) . '</p>';
 
@@ -102,7 +102,7 @@ class AppFixtures extends Fixture
                 for($j = 1; $j <= mt_rand(2,5);$j++){
                     $image = new Image();
                     
-                    $image->setUrl("/public/img/chambres/ch-". rand(1, 20) .".jpg")
+                    $image->setUrl("/img/chambres/ch-". rand(1, 20) .".jpg")
                         ->setCaption($faker->sentence())
                         ->setAd($ad);
 
