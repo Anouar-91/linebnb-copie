@@ -2080,6 +2080,6 @@ class __TwigTemplate_ffe04f512cb8dc6b5337b87e9c7f6a17ea81a6733972f2a7071794ef3a9
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/Applications/MAMP/htdocs/lineup/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "/Applications/MAMP/htdocs/lineup-copie/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

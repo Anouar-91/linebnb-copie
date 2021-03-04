@@ -258,6 +258,6 @@ class __TwigTemplate_bf6c59d1a203d90b12f5bfa6bd82c58d619396d3d27a46dbb236d536373
                     {% endfor %}
                 </div>
             </div>
-        {% endfor %}", "partials/header.html.twig", "/Applications/MAMP/htdocs/lineup/templates/partials/header.html.twig");
+        {% endfor %}", "partials/header.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/partials/header.html.twig");
     }
 }

@@ -71,6 +71,6 @@ class __TwigTemplate_e4764120063c5750ae1c288df32e4a560f175b17a1d53627fe96385af8a
     <p class=\"text-center\">Copyright LineUp !</p>
 
 </footer>
-", "partials/footer.html.twig", "/Applications/MAMP/htdocs/lineup/templates/partials/footer.html.twig");
+", "partials/footer.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/partials/footer.html.twig");
     }
 }

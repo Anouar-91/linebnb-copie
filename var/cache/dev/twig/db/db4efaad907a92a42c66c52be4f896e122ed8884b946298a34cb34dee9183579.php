@@ -168,6 +168,6 @@ class __TwigTemplate_aad56b195366982fbd0addc87100b24e4ba6734dcce05dbb1d01039f9cf
     </div>
 </div>
 {% endblock %}
-", "ad/index.html.twig", "/Applications/MAMP/htdocs/lineup/templates/ad/index.html.twig");
+", "ad/index.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/ad/index.html.twig");
     }
 }

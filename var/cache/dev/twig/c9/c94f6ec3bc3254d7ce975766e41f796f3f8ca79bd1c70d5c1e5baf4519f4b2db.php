@@ -271,6 +271,6 @@ class __TwigTemplate_4e77e0f96ef259ff04d6a2601d6fe978c9ba8ac310e595f3ecc6b2f0d2e
 
             </div>
 
-    {% endblock %}", "home.html.twig", "/Applications/MAMP/htdocs/lineup/templates/home.html.twig");
+    {% endblock %}", "home.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/home.html.twig");
     }
 }

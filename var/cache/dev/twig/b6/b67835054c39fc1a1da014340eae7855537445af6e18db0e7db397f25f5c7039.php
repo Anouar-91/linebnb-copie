@@ -95,6 +95,6 @@ class __TwigTemplate_275a372981b52a156811df22712f94803fbc7734d4a3be3a57a7947c67f
     <i class=\"far fa-star\"></i>
 {% endif %}
 {% endfor %}
-</span>", "partials/rating.html.twig", "/Applications/MAMP/htdocs/lineup/templates/partials/rating.html.twig");
+</span>", "partials/rating.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/partials/rating.html.twig");
     }
 }
