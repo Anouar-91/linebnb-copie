@@ -1,0 +1,214 @@
+<?php //%255BApp%255CEntity%255CBooking%2524CLASSMETADATA%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Booking',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\Booking',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\BookingRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'startDate' => [
+                        'fieldName' => 'startDate',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'start_date',
+                    ],
+                    'endDate' => [
+                        'fieldName' => 'endDate',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'end_date',
+                    ],
+                    'createdAt' => [
+                        'fieldName' => 'createdAt',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'created_at',
+                    ],
+                    'amount' => [
+                        'fieldName' => 'amount',
+                        'type' => 'float',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'amount',
+                    ],
+                    'comment' => [
+                        'fieldName' => 'comment',
+                        'type' => 'text',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'comment',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'start_date' => 'startDate',
+                    'end_date' => 'endDate',
+                    'created_at' => 'createdAt',
+                    'amount' => 'amount',
+                    'comment' => 'comment',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'startDate' => 'start_date',
+                    'endDate' => 'end_date',
+                    'createdAt' => 'created_at',
+                    'amount' => 'amount',
+                    'comment' => 'comment',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'booking',
+                ],
+            ],
+            'lifecycleCallbacks' => [
+                [
+                    'prePersist' => [
+                        'prePersist',
+                    ],
+                    'preUpdate' => [
+                        'prePersist',
+                    ],
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'booker' => [
+                        'fieldName' => 'booker',
+                        'joinColumns' => [
+                            [
+                                'name' => 'booker_id',
+                                'unique' => false,
+                                'nullable' => false,
+                                'onDelete' => null,
+                                'columnDefinition' => null,
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [],
+                        'inversedBy' => 'bookings',
+                        'targetEntity' => 'App\\Entity\\User',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\Booking',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'booker_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'booker_id' => 'booker_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'booker_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                    'ad' => [
+                        'fieldName' => 'ad',
+                        'joinColumns' => [
+                            [
+                                'name' => 'ad_id',
+                                'unique' => false,
+                                'nullable' => false,
+                                'onDelete' => null,
+                                'columnDefinition' => null,
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [],
+                        'inversedBy' => 'bookings',
+                        'targetEntity' => 'App\\Entity\\Ad',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\Booking',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'ad_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'ad_id' => 'ad_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'ad_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

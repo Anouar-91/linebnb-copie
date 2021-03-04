@@ -1,0 +1,91 @@
+<?php //%255B4f3a4bb7a182419dde208afad5b18f11%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT u0_.id AS id_0, u0_.first_name AS first_name_1, u0_.last_name AS last_name_2, u0_.email AS email_3, u0_.picture AS picture_4, u0_.hash AS hash_5, u0_.introduction AS introduction_6, u0_.description AS description_7, u0_.slug AS slug_8, AVG(c1_.rating) AS sclr_9 FROM user u0_ INNER JOIN ad a2_ ON u0_.id = a2_.author_id INNER JOIN comment c1_ ON a2_.id = c1_.ad_id GROUP BY u0_.id, u0_.first_name, u0_.last_name, u0_.email, u0_.picture, u0_.hash, u0_.introduction, u0_.description, u0_.slug ORDER BY sclr_9 DESC LIMIT 3',
+            ],
+        ],
+        'stdClass' => [
+            'isMixed' => [
+                2 => true,
+            ],
+            'aliasMap' => [
+                2 => [
+                    'u' => 'App\\Entity\\User',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'first_name_1' => 'firstName',
+                    'last_name_2' => 'lastName',
+                    'email_3' => 'email',
+                    'picture_4' => 'picture',
+                    'hash_5' => 'hash',
+                    'introduction_6' => 'introduction',
+                    'description_7' => 'description',
+                    'slug_8' => 'slug',
+                ],
+            ],
+            'scalarMappings' => [
+                2 => [
+                    'sclr_9' => 'avgRatings',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'sclr_9' => 'string',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'u' => 'user',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'u',
+                    'first_name_1' => 'u',
+                    'last_name_2' => 'u',
+                    'email_3' => 'u',
+                    'picture_4' => 'u',
+                    'hash_5' => 'u',
+                    'introduction_6' => 'u',
+                    'description_7' => 'u',
+                    'slug_8' => 'u',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\User',
+                    'first_name_1' => 'App\\Entity\\User',
+                    'last_name_2' => 'App\\Entity\\User',
+                    'email_3' => 'App\\Entity\\User',
+                    'picture_4' => 'App\\Entity\\User',
+                    'hash_5' => 'App\\Entity\\User',
+                    'introduction_6' => 'App\\Entity\\User',
+                    'description_7' => 'App\\Entity\\User',
+                    'slug_8' => 'App\\Entity\\User',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

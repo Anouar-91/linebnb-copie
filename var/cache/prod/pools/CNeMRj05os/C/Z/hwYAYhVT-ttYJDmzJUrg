@@ -1,0 +1,95 @@
+<?php //%255Bff81c9371057932a9f8826b8844d2167%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT a0_.id AS id_0, a0_.title AS title_1, a0_.slug AS slug_2, a0_.price AS price_3, a0_.introduction AS introduction_4, a0_.content AS content_5, a0_.cover_image AS cover_image_6, a0_.rooms AS rooms_7, AVG(c1_.rating) AS sclr_8, a0_.author_id AS author_id_9 FROM ad a0_ INNER JOIN comment c1_ ON a0_.id = c1_.ad_id GROUP BY a0_.id, a0_.title, a0_.slug, a0_.price, a0_.introduction, a0_.content, a0_.cover_image, a0_.rooms, a0_.author_id ORDER BY sclr_8 DESC LIMIT 3',
+            ],
+        ],
+        'stdClass' => [
+            'isMixed' => [
+                2 => true,
+            ],
+            'aliasMap' => [
+                2 => [
+                    'a' => 'App\\Entity\\Ad',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'title_1' => 'title',
+                    'slug_2' => 'slug',
+                    'price_3' => 'price',
+                    'introduction_4' => 'introduction',
+                    'content_5' => 'content',
+                    'cover_image_6' => 'coverImage',
+                    'rooms_7' => 'rooms',
+                ],
+            ],
+            'scalarMappings' => [
+                2 => [
+                    'sclr_8' => 'avgRatings',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'sclr_8' => 'string',
+                    'author_id_9' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'a' => 'annonce',
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'author_id_9' => 'author_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'a',
+                    'title_1' => 'a',
+                    'slug_2' => 'a',
+                    'price_3' => 'a',
+                    'introduction_4' => 'a',
+                    'content_5' => 'a',
+                    'cover_image_6' => 'a',
+                    'rooms_7' => 'a',
+                    'author_id_9' => 'a',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Ad',
+                    'title_1' => 'App\\Entity\\Ad',
+                    'slug_2' => 'App\\Entity\\Ad',
+                    'price_3' => 'App\\Entity\\Ad',
+                    'introduction_4' => 'App\\Entity\\Ad',
+                    'content_5' => 'App\\Entity\\Ad',
+                    'cover_image_6' => 'App\\Entity\\Ad',
+                    'rooms_7' => 'App\\Entity\\Ad',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

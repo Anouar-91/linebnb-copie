@@ -1,0 +1,49 @@
+<?php //%255B7ef6901dbb9a48d00a46a9c0ffe02e63%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT AVG(c0_.rating) AS sclr_0, a1_.title AS title_1, a1_.id AS id_2, u2_.first_name AS first_name_3, u2_.last_name AS last_name_4, u2_.picture AS picture_5 FROM comment c0_ INNER JOIN ad a1_ ON c0_.ad_id = a1_.id INNER JOIN user u2_ ON a1_.author_id = u2_.id GROUP BY a1_.id, a1_.title, a1_.slug, a1_.price, a1_.introduction, a1_.content, a1_.cover_image, a1_.rooms, a1_.author_id ORDER BY sclr_0 ASC LIMIT 5',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'sclr_0' => 'note',
+                    'title_1' => 'title',
+                    'id_2' => 'id',
+                    'first_name_3' => 'firstName',
+                    'last_name_4' => 'lastName',
+                    'picture_5' => 'picture',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'sclr_0' => 'string',
+                    'title_1' => 'string',
+                    'id_2' => 'integer',
+                    'first_name_3' => 'string',
+                    'last_name_4' => 'string',
+                    'picture_5' => 'string',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+    {% block title %}
+        Bienvenue chez votre futur partenaire
+    {% endblock %}
+
+    {% block body %}
+        <div class="container">
+            <div class="jumbotron mt-3">
+                <h1 class="display-3">Bienvenue chez LineBnB</h1>
+                <p class="lead">Nous mettons en relations les voyageurs et les propriétaires qui souhaitent profiter d'opportunités et gagner de l'argent en proposant leurs biens à la location !</p>
+                <hr class="my-4">
+                <p>Vous êtes voyageur ? Vous voulez voir où vous pourriez loger pour votre prochain déplacement ?</p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="{{path('ads_index')}}" role="button">Voir nos offres</a>
+                </p>
+            </div>
+        
+
+            <h2 class="my-5"> Nos produits premiums</h2>
+
+            <div class="row">
+                {% for data in ads %}
+                    {% include "ad/_ad.html.twig" with {'ad' : data.annonce} %}
+                    
+                {% endfor %}
+ 
+            </div>
+
+            <h2 class="my-5">Nos propriétaires stars !</h2>
+
+            <div class="row">
+            {% for data in users %}
+                <div class="col">
+                    <div class="card border-secondary mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title">{{data.user.fullName}}</h4>
+                            <hr>
+
+                            <div class="card-text">
+
+                                <img src="{{data.user.picture}}" alt="Avatar de {{data.user.fullName}}" class="float-left mr-3"/>
+                                <p>{{data.user.introduction}}</p>
+                                <a href="{{path('user_show', {'slug' : data.user.slug})}}" class="btn btn-success float-right">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 {% endfor %}
+               
+
+            </div>
+
+    {% endblock %}
