@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>LineBnB - {% block title %} {% endblock %}</title>
-        <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+{#         <link rel="stylesheet" href="/css/bootstrap.min.css"> #}
+        <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 {#         <link rel="stylesheet" href="/css/app.scss"> #}
-{#         <link rel="stylesheet" href="{{asset('build/css/app.css')}}"> #}
-        <link rel="stylesheet" href="/public/css/app.css">
+
+{#         <link rel="stylesheet" href="/css/app.css"> #}
         {% block stylesheets %}
         {% endblock %}
 
@@ -26,9 +27,9 @@
 
          
         
-        <script src="/public/js/jquery.min.js"></script>
-        <script src="/public/js/popper.min.js"></script>
-        <script src="/public/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
 
 
 

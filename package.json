@@ -4,6 +4,7 @@
         "@symfony/webpack-encore": "^1.1.2",
         "bootstrap": "^4.6.0",
         "core-js": "^3.0.0",
+        "jquery": "^3.6.0",
         "popper.js": "^1.16.1",
         "regenerator-runtime": "^0.13.2",
         "sass": "^1.32.8",
@@ -20,7 +21,6 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "jquery": "^3.6.0",
         "node-sass": "^5.0.0"
     }
 }

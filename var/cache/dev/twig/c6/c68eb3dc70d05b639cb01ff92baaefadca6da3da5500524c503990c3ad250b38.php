@@ -52,9 +52,13 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
-        <link rel=\"stylesheet\" href=\"https://pro.fontawesome.com/releases/v5.10.0/css/all.css\" integrity=\"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p\" crossorigin=\"anonymous\"/>
-        <link rel=\"stylesheet\" href=\"/css/app.css\">
+";
+        // line 7
+        echo "        <link rel=\"stylesheet\" href=\"https://pro.fontawesome.com/releases/v5.10.0/css/all.css\" integrity=\"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p\" crossorigin=\"anonymous\"/>
+        <link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/css/app.css"), "html", null, true);
+        echo "\">
 ";
         // line 10
         echo "        ";
@@ -87,16 +91,18 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
         <script src=\"/js/jquery.min.js\"></script>
         <script src=\"/js/popper.min.js\"></script>
         <script src=\"/js/bootstrap.min.js\"></script>
-
 ";
-        // line 33
+        // line 35
+        echo "
+";
+        // line 37
         echo "
 
 
         ";
-        // line 36
+        // line 40
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 37
+        // line 41
         echo "    </body>
 
        
@@ -169,7 +175,7 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
 
     }
 
-    // line 36
+    // line 40
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -200,7 +206,7 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
 
     public function getDebugInfo()
     {
-        return array (  173 => 36,  163 => 22,  153 => 21,  143 => 11,  133 => 10,  114 => 5,  100 => 37,  98 => 36,  93 => 33,  84 => 25,  82 => 24,  79 => 23,  77 => 21,  72 => 18,  70 => 17,  63 => 12,  60 => 10,  53 => 5,  47 => 1,);
+        return array (  179 => 40,  169 => 22,  159 => 21,  149 => 11,  139 => 10,  120 => 5,  106 => 41,  104 => 40,  99 => 37,  96 => 35,  88 => 25,  86 => 24,  83 => 23,  81 => 21,  76 => 18,  74 => 17,  67 => 12,  64 => 10,  60 => 8,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -210,9 +216,9 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
     <head>
         <meta charset=\"UTF-8\">
         <title>LineBnB - {% block title %} {% endblock %}</title>
-        <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
+{#         <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\"> #}
         <link rel=\"stylesheet\" href=\"https://pro.fontawesome.com/releases/v5.10.0/css/all.css\" integrity=\"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p\" crossorigin=\"anonymous\"/>
-        <link rel=\"stylesheet\" href=\"/css/app.css\">
+        <link rel=\"stylesheet\" href=\"{{asset('build/css/app.css')}}\">
 {#         <link rel=\"stylesheet\" href=\"{{asset('build/css/app.css')}}\"> #}
         {% block stylesheets %}
         {% endblock %}
@@ -235,8 +241,12 @@ class __TwigTemplate_ad5efa34a5f6299de133cd7441534e9b5bbfe24ef49c93950630648fb05
         <script src=\"/js/jquery.min.js\"></script>
         <script src=\"/js/popper.min.js\"></script>
         <script src=\"/js/bootstrap.min.js\"></script>
+{# 
+        <script src=\"build/js/popper.js\"></script>
+        <script src=\"build/js/jquery.js\"></script>
+        <script src=\"build/js/bootstrap.js\"></script> #}
 
-{#         <script src=\"{{asset('build/js/app.js')}}\"></script> #}
+{#         <script src=\"{{ asset('build/js/app.js')}}\"></script> #}
 
 
 

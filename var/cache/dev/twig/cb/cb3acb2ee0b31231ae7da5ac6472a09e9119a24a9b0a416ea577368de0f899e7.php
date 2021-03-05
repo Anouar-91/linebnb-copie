@@ -52,49 +52,54 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"stylesheet\" href=\"/public/css/bootstrap.min.css\">
+";
+        // line 7
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/css/app.css"), "html", null, true);
+        echo "\">
         <link rel=\"stylesheet\" href=\"https://pro.fontawesome.com/releases/v5.10.0/css/all.css\" integrity=\"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p\" crossorigin=\"anonymous\"/>
 ";
         // line 10
-        echo "        <link rel=\"stylesheet\" href=\"/public/css/app.css\">
-        ";
-        // line 11
+        echo "
+";
+        // line 12
+        echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 13
+        // line 14
         echo "
         
     </head>
     <body>
 
         ";
-        // line 18
-        $this->loadTemplate("admin/partials/header.html.twig", "admin/base.html.twig", 18)->display($context);
         // line 19
+        $this->loadTemplate("admin/partials/header.html.twig", "admin/base.html.twig", 19)->display($context);
+        // line 20
         echo "
 
         
         ";
-        // line 22
+        // line 23
         $this->displayBlock('body', $context, $blocks);
-        // line 24
+        // line 25
         echo "
         ";
-        // line 25
-        $this->loadTemplate("admin/partials//footer.html.twig", "admin/base.html.twig", 25)->display($context);
         // line 26
+        $this->loadTemplate("admin/partials//footer.html.twig", "admin/base.html.twig", 26)->display($context);
+        // line 27
         echo "
          
         
-        <script src=\"/public/js/jquery.min.js\"></script>
-        <script src=\"/public/js/popper.min.js\"></script>
-        <script src=\"/public/js/bootstrap.min.js\"></script>
+        <script src=\"/js/jquery.min.js\"></script>
+        <script src=\"/js/popper.min.js\"></script>
+        <script src=\"/js/bootstrap.min.js\"></script>
 
 
 
         ";
-        // line 35
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 36
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 37
         echo "    </body>
 
        
@@ -127,7 +132,7 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
 
     }
 
-    // line 11
+    // line 12
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -137,7 +142,7 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 12
+        // line 13
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -147,7 +152,7 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
 
     }
 
-    // line 22
+    // line 23
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -157,7 +162,7 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 23
+        // line 24
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -167,7 +172,7 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
 
     }
 
-    // line 35
+    // line 36
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,7 +203,7 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
 
     public function getDebugInfo()
     {
-        return array (  171 => 35,  161 => 23,  151 => 22,  141 => 12,  131 => 11,  112 => 5,  98 => 36,  96 => 35,  85 => 26,  83 => 25,  80 => 24,  78 => 22,  73 => 19,  71 => 18,  64 => 13,  62 => 11,  59 => 10,  53 => 5,  47 => 1,);
+        return array (  176 => 36,  166 => 24,  156 => 23,  146 => 13,  136 => 12,  117 => 5,  103 => 37,  101 => 36,  90 => 27,  88 => 26,  85 => 25,  83 => 23,  78 => 20,  76 => 19,  69 => 14,  66 => 12,  63 => 10,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -208,11 +213,12 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
     <head>
         <meta charset=\"UTF-8\">
         <title>LineBnB - {% block title %} {% endblock %}</title>
-        <link rel=\"stylesheet\" href=\"/public/css/bootstrap.min.css\">
+{#         <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\"> #}
+        <link rel=\"stylesheet\" href=\"{{asset('build/css/app.css')}}\">
         <link rel=\"stylesheet\" href=\"https://pro.fontawesome.com/releases/v5.10.0/css/all.css\" integrity=\"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p\" crossorigin=\"anonymous\"/>
 {#         <link rel=\"stylesheet\" href=\"/css/app.scss\"> #}
-{#         <link rel=\"stylesheet\" href=\"{{asset('build/css/app.css')}}\"> #}
-        <link rel=\"stylesheet\" href=\"/public/css/app.css\">
+
+{#         <link rel=\"stylesheet\" href=\"/css/app.css\"> #}
         {% block stylesheets %}
         {% endblock %}
 
@@ -231,9 +237,9 @@ class __TwigTemplate_f039ebe92e261e266ebcd1b3dcd9e4306c5ed51bff8c8cc97b037241e34
 
          
         
-        <script src=\"/public/js/jquery.min.js\"></script>
-        <script src=\"/public/js/popper.min.js\"></script>
-        <script src=\"/public/js/bootstrap.min.js\"></script>
+        <script src=\"/js/jquery.min.js\"></script>
+        <script src=\"/js/popper.min.js\"></script>
+        <script src=\"/js/bootstrap.min.js\"></script>
 
 
 
