@@ -86,6 +86,7 @@
     <parameter key="kernel.container_class">srcApp_KernelDevDebugContainer</parameter>
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="container.dumper.inline_factories">true</parameter>
+    <parameter key="images_directory">/Applications/MAMP/htdocs/lineup-copie/public/uploads</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -5273,7 +5274,7 @@
       <tag name="console.command" command="server:run"/>
       <argument>/Applications/MAMP/htdocs/lineup-copie/public</argument>
       <argument>dev</argument>
-      <argument>/Applications/MAMP/htdocs/lineup-copie</argument>
+      <argument>/Applications/MAMP/htdocs/lineup-copie/var/cache</argument>
       <call method="setName">
         <argument>server:run</argument>
       </call>
@@ -5282,21 +5283,21 @@
       <tag name="console.command" command="server:start"/>
       <argument>/Applications/MAMP/htdocs/lineup-copie/public</argument>
       <argument>dev</argument>
-      <argument>/Applications/MAMP/htdocs/lineup-copie</argument>
+      <argument>/Applications/MAMP/htdocs/lineup-copie/var/cache</argument>
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
       <tag name="console.command" command="server:stop"/>
-      <argument>/Applications/MAMP/htdocs/lineup-copie</argument>
+      <argument>/Applications/MAMP/htdocs/lineup-copie/var/cache</argument>
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command" command="server:status"/>
-      <argument>/Applications/MAMP/htdocs/lineup-copie</argument>
+      <argument>/Applications/MAMP/htdocs/lineup-copie/var/cache</argument>
       <call method="setName">
         <argument>server:status</argument>
       </call>

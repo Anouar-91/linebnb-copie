@@ -73,6 +73,21 @@ class SecurityController extends AbstractController
             $slug = $slugify->slugify($user->getFirstName() . " " . $user->getLastName());
             $user->setSlug($slug);
 
+
+            //on récupere les images transmises
+            $image = $form->get('picture')->getData();
+            //on génére un nouveau nom de fichier
+            $fichier = "uploads/" . md5(uniqid()) . '.' . $image->guessExtension(); 
+            //on copier le fichier dans le dossier uploads
+            $image->move(
+                $this->getParameter('images_directory'),
+                $fichier
+            );
+
+            $user->setPicture($fichier);
+
+
+
              $manager->persist($user);
              $manager->flush();
 

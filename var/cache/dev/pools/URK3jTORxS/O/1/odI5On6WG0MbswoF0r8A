@@ -2,8 +2,7 @@
 
 return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
     $o = [
-        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
-        clone ($p['Symfony\\Component\\Validator\\Constraints\\Url'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Url')),
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
     ],
     null,
     [
@@ -14,19 +13,10 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'nullable' => [
                 true,
             ],
-            'message' => [
-                1 => 'Veuillez donner une URL valide pour votre avatar !',
-            ],
-            'groups' => [
-                1 => [
-                    'Default',
-                ],
-            ],
         ],
     ],
     [
         $o[0],
-        $o[1],
     ],
     []
 ); }];

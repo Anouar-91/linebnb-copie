@@ -10,6 +10,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
@@ -23,7 +24,7 @@ class RegistrationType extends ApplicationType
             ->add('firstName', TextType::class, $this->getconfiguration("Prénom", "Votre prénom ..."))
             ->add('lastName', TextType::class, $this->getconfiguration("Nom", "Votre nom ..."))
             ->add('email', EmailType::class, $this->getconfiguration("Email", "Votre adresse email..."))
-            ->add('picture', UrlType::class, $this->getconfiguration("Photo de profil", "Url de votre avatar..."))
+            ->add('picture', FileType::class, $this->getconfiguration("Photo de profil", "Parcourir vos fichiers..."))
             ->add('hash', PasswordType::class, $this->getconfiguration("Mot de passe", "Choisissez un bon mot de passe..."))
             ->add('passwordConfirm', PasswordType::class, $this->getconfiguration("Confirmation de mot de passe", "Veuillez confirmer votre mot de passe"))
             ->add('introduction', TextType::class, $this->getconfiguration("Introduction", "Présentez-vous en quelques mots ..."))
