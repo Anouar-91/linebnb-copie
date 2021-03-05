@@ -42,7 +42,7 @@ class __TwigTemplate_adf63ff82921311fd96d2620dc9b6877a6fdaf9ab206bf0cf525bdfc17f
         // line 1
         $context["url"] = $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_show", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 1, $this->source); })()), "slug", [], "any", false, false, false, 1)]);
         // line 2
-        echo "<div class=\"col-md-4\">
+        echo "<div class=\"col-12 col-lg-4\">
 
     <div class=\"card bg-light mb-3\">
         <div class=\"card-header text-center\">
@@ -138,7 +138,7 @@ class __TwigTemplate_adf63ff82921311fd96d2620dc9b6877a6fdaf9ab206bf0cf525bdfc17f
     public function getSourceContext()
     {
         return new Source("{% set url = path('ads_show', {'slug' : ad.slug}) %}
-<div class=\"col-md-4\">
+<div class=\"col-12 col-lg-4\">
 
     <div class=\"card bg-light mb-3\">
         <div class=\"card-header text-center\">

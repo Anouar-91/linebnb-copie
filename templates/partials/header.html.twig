@@ -1,17 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="{{path('homepage')}}">LineBnB</a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{path('homepage')}}">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{path('ads_index')}}">Annonces</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{path('homepage')}}">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{path('ads_index')}}">Annonces</a>
+                        </li>
 
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -26,7 +28,7 @@
                             <a href="{{path('account_bookings')}}" class="dropdown-item">Mes réservations</a>
                             <a href="{{path('account_profile')}}" class="dropdown-item">Modifier mon profil</a>
                             <a href="{{path('account_password')}}" class="dropdown-item">Modifier mon mot de passe</a>  
-                                         
+                                        
                             <a class="dropdown-item" href="{{path('ads_create')}}">Créer une nouvelle annonce</a>
                             <div class="dropdown-divider"></div>
                             <a href="{{path('app_logout')}}" class="dropdown-item">Déconnexion</a>
@@ -43,9 +45,13 @@
 
                     {% endif %}
                 </ul>
-                
+                        
             </div>
         </nav>
+        
+    </div>
+</div>
+    
 
 
 {# permet d'affiche les flashs dans le header #}

@@ -42,7 +42,7 @@ class __TwigTemplate_e4764120063c5750ae1c288df32e4a560f175b17a1d53627fe96385af8a
         // line 1
         echo "<footer class=\"mt-5 bg-light py-5 text-center\">
 
-    <p class=\"text-center\">Copyright LineUp !</p>
+    <p class=\"text-center\">Copyright LineBnB ! - Anouar BERROUANE</p>
 
 </footer>
 ";
@@ -68,7 +68,7 @@ class __TwigTemplate_e4764120063c5750ae1c288df32e4a560f175b17a1d53627fe96385af8a
     {
         return new Source("<footer class=\"mt-5 bg-light py-5 text-center\">
 
-    <p class=\"text-center\">Copyright LineUp !</p>
+    <p class=\"text-center\">Copyright LineBnB ! - Anouar BERROUANE</p>
 
 </footer>
 ", "partials/footer.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/partials/footer.html.twig");

@@ -162,36 +162,32 @@ class __TwigTemplate_4e77e0f96ef259ff04d6a2601d6fe978c9ba8ac310e595f3ecc6b2f0d2e
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 36), "fullName", [], "any", false, false, false, 36), "html", null, true);
             echo "</h4>
                             <hr>
-
                             <div class=\"card-text\">
-
                                 <img src=\"";
-            // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 41), "picture", [], "any", false, false, false, 41), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 39), "picture", [], "any", false, false, false, 39), "html", null, true);
             echo "\" alt=\"Avatar de ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 41), "fullName", [], "any", false, false, false, 41), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 39), "fullName", [], "any", false, false, false, 39), "html", null, true);
             echo "\" class=\"float-left mr-3\"/>
                                 <p>";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 42), "introduction", [], "any", false, false, false, 42), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 40), "introduction", [], "any", false, false, false, 40), "html", null, true);
             echo "</p>
                                 <a href=\"";
-            // line 43
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_show", ["slug" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 43), "slug", [], "any", false, false, false, 43)]), "html", null, true);
+            // line 41
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_show", ["slug" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "user", [], "any", false, false, false, 41), "slug", [], "any", false, false, false, 41)]), "html", null, true);
             echo "\" class=\"btn btn-success float-right\">En savoir plus</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                 ";
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['data'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
-        echo "               
-
-            </div>
+        // line 47
+        echo "            </div>
 
     ";
         
@@ -214,7 +210,7 @@ class __TwigTemplate_4e77e0f96ef259ff04d6a2601d6fe978c9ba8ac310e595f3ecc6b2f0d2e
 
     public function getDebugInfo()
     {
-        return array (  192 => 49,  180 => 43,  176 => 42,  170 => 41,  162 => 36,  157 => 33,  153 => 32,  145 => 26,  130 => 24,  127 => 23,  110 => 22,  99 => 14,  90 => 7,  80 => 6,  69 => 3,  59 => 2,  36 => 1,);
+        return array (  190 => 47,  178 => 41,  174 => 40,  168 => 39,  162 => 36,  157 => 33,  153 => 32,  145 => 26,  130 => 24,  127 => 23,  110 => 22,  99 => 14,  90 => 7,  80 => 6,  69 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -256,9 +252,7 @@ class __TwigTemplate_4e77e0f96ef259ff04d6a2601d6fe978c9ba8ac310e595f3ecc6b2f0d2e
                         <div class=\"card-body\">
                             <h4 class=\"card-title\">{{data.user.fullName}}</h4>
                             <hr>
-
                             <div class=\"card-text\">
-
                                 <img src=\"{{data.user.picture}}\" alt=\"Avatar de {{data.user.fullName}}\" class=\"float-left mr-3\"/>
                                 <p>{{data.user.introduction}}</p>
                                 <a href=\"{{path('user_show', {'slug' : data.user.slug})}}\" class=\"btn btn-success float-right\">En savoir plus</a>
@@ -266,9 +260,7 @@ class __TwigTemplate_4e77e0f96ef259ff04d6a2601d6fe978c9ba8ac310e595f3ecc6b2f0d2e
                         </div>
                     </div>
                 </div>
-                 {% endfor %}
-               
-
+            {% endfor %}
             </div>
 
     {% endblock %}", "home.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/home.html.twig");

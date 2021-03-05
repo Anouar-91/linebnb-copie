@@ -40,124 +40,130 @@ class __TwigTemplate_bf6c59d1a203d90b12f5bfa6bd82c58d619396d3d27a46dbb236d536373
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "partials/header.html.twig"));
 
         // line 1
-        echo "        <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
+        echo "<div class=\"container-fluid\">
+    <div class=\"row\">
+        <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
             <a class=\"navbar-brand\" href=\"";
-        // line 2
+        // line 4
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("homepage");
         echo "\">LineBnB</a>
-            <button class=\"navbar-toggler collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
+        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            <span class=\"navbar-toggler-icon\"></span>
+        </button>
 
-            <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
-                <ul class=\"navbar-nav mr-auto\">
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"";
-        // line 10
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"";
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("homepage");
         echo "\">Accueil</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"";
-        // line 13
+                            </li>
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"";
+        // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_index");
         echo "\">Annonces</a>
-                    </li>
+                            </li>
 
-                </ul>
-                <ul class=\"navbar-nav ml-auto\">
-                    ";
-        // line 18
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18)) {
-            echo " ";
-            // line 19
-            echo "                    <li class=\"nav-item dropdown\">
-                        <a href=\"#\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" id=\"accountDropdownLink\">
-                            <img src=\"";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "picture", [], "any", false, false, false, 21), "html", null, true);
-            echo "\" alt=\"Avatar de ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "fullName", [], "any", false, false, false, 21), "html", null, true);
-            echo "\" class=\"avatar avatar-mini\">
+                        </ul>
+                        <ul class=\"navbar-nav ml-auto\">
                             ";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "user", [], "any", false, false, false, 22), "fullName", [], "any", false, false, false, 22), "html", null, true);
+        // line 20
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20)) {
+            echo " ";
+            // line 21
+            echo "                            <li class=\"nav-item dropdown\">
+                                <a href=\"#\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" id=\"accountDropdownLink\">
+                                    <img src=\"";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "picture", [], "any", false, false, false, 23), "html", null, true);
+            echo "\" alt=\"Avatar de ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "fullName", [], "any", false, false, false, 23), "html", null, true);
+            echo "\" class=\"avatar avatar-mini\">
+                                    ";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", [], "any", false, false, false, 24), "fullName", [], "any", false, false, false, 24), "html", null, true);
             echo "
-                        </a>
-                        <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledy=\"accountDopdownLink\">
-                            <a href=\"";
-            // line 25
+                                </a>
+                                <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledy=\"accountDopdownLink\">
+                                    <a href=\"";
+            // line 27
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account_index");
             echo "\" class=\"dropdown-item\">Mon compte</a>
-                            <a href=\"";
-            // line 26
+                                    <a href=\"";
+            // line 28
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account_bookings");
             echo "\" class=\"dropdown-item\">Mes réservations</a>
-                            <a href=\"";
-            // line 27
+                                    <a href=\"";
+            // line 29
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account_profile");
             echo "\" class=\"dropdown-item\">Modifier mon profil</a>
-                            <a href=\"";
-            // line 28
+                                    <a href=\"";
+            // line 30
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account_password");
             echo "\" class=\"dropdown-item\">Modifier mon mot de passe</a>  
-                                         
-                            <a class=\"dropdown-item\" href=\"";
-            // line 30
+                                                
+                                    <a class=\"dropdown-item\" href=\"";
+            // line 32
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_create");
             echo "\">Créer une nouvelle annonce</a>
-                            <div class=\"dropdown-divider\"></div>
-                            <a href=\"";
-            // line 32
+                                    <div class=\"dropdown-divider\"></div>
+                                    <a href=\"";
+            // line 34
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\" class=\"dropdown-item\">Déconnexion</a>
-                        </div>
-                    </li>
+                                </div>
+                            </li>
 
-                    ";
+                            ";
         } else {
-            // line 37
-            echo "                    <li class=\"nav-item\">
-                        <a href=\"";
-            // line 38
+            // line 39
+            echo "                            <li class=\"nav-item\">
+                                <a href=\"";
+            // line 40
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
             echo "\" class=\"nav-link\">Inscription</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a href=\"";
-            // line 41
+                            </li>
+                            <li class=\"nav-item\">
+                                <a href=\"";
+            // line 43
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\" class=\"nav-link\">Connexion</a>
-                    </li>
+                            </li>
 
-                    ";
+                            ";
         }
-        // line 45
-        echo "                </ul>
-                
-            </div>
-        </nav>
+        // line 47
+        echo "                        </ul>
+                        
+                    </div>
+                </nav>
+        
+        </div>
+        </div>
+    
 
 
 ";
-        // line 52
+        // line 58
         echo "        ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "flashes", [], "any", false, false, false, 52));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 58, $this->source); })()), "flashes", [], "any", false, false, false, 58));
         foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
             echo " ";
-            // line 53
+            // line 59
             echo "            <div class=\"container\">
                 <div class=\"alert alert-";
-            // line 54
+            // line 60
             echo twig_escape_filter($this->env, $context["label"], "html", null, true);
             echo "\">
                     ";
-            // line 55
+            // line 61
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 56
+                // line 62
                 echo "                        <p>";
                 echo $context["message"];
                 echo "</p>
@@ -166,7 +172,7 @@ class __TwigTemplate_bf6c59d1a203d90b12f5bfa6bd82c58d619396d3d27a46dbb236d536373
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 58
+            // line 64
             echo "                </div>
             </div>
         ";
@@ -194,59 +200,65 @@ class __TwigTemplate_bf6c59d1a203d90b12f5bfa6bd82c58d619396d3d27a46dbb236d536373
 
     public function getDebugInfo()
     {
-        return array (  170 => 58,  161 => 56,  157 => 55,  153 => 54,  150 => 53,  144 => 52,  136 => 45,  129 => 41,  123 => 38,  120 => 37,  112 => 32,  107 => 30,  102 => 28,  98 => 27,  94 => 26,  90 => 25,  84 => 22,  78 => 21,  74 => 19,  71 => 18,  63 => 13,  57 => 10,  46 => 2,  43 => 1,);
+        return array (  176 => 64,  167 => 62,  163 => 61,  159 => 60,  156 => 59,  150 => 58,  138 => 47,  131 => 43,  125 => 40,  122 => 39,  114 => 34,  109 => 32,  104 => 30,  100 => 29,  96 => 28,  92 => 27,  86 => 24,  80 => 23,  76 => 21,  73 => 20,  65 => 15,  59 => 12,  48 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("        <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
+        return new Source("<div class=\"container-fluid\">
+    <div class=\"row\">
+        <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
             <a class=\"navbar-brand\" href=\"{{path('homepage')}}\">LineBnB</a>
-            <button class=\"navbar-toggler collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
+        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            <span class=\"navbar-toggler-icon\"></span>
+        </button>
 
-            <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
-                <ul class=\"navbar-nav mr-auto\">
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"{{path('homepage')}}\">Accueil</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"{{path('ads_index')}}\">Annonces</a>
-                    </li>
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"{{path('homepage')}}\">Accueil</a>
+                            </li>
+                            <li class=\"nav-item\">
+                                <a class=\"nav-link\" href=\"{{path('ads_index')}}\">Annonces</a>
+                            </li>
 
-                </ul>
-                <ul class=\"navbar-nav ml-auto\">
-                    {% if app.user %} {# si je suis connecté #}
-                    <li class=\"nav-item dropdown\">
-                        <a href=\"#\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" id=\"accountDropdownLink\">
-                            <img src=\"{{app.user.picture}}\" alt=\"Avatar de {{app.user.fullName}}\" class=\"avatar avatar-mini\">
-                            {{app.user.fullName}}
-                        </a>
-                        <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledy=\"accountDopdownLink\">
-                            <a href=\"{{path('account_index')}}\" class=\"dropdown-item\">Mon compte</a>
-                            <a href=\"{{path('account_bookings')}}\" class=\"dropdown-item\">Mes réservations</a>
-                            <a href=\"{{path('account_profile')}}\" class=\"dropdown-item\">Modifier mon profil</a>
-                            <a href=\"{{path('account_password')}}\" class=\"dropdown-item\">Modifier mon mot de passe</a>  
-                                         
-                            <a class=\"dropdown-item\" href=\"{{path('ads_create')}}\">Créer une nouvelle annonce</a>
-                            <div class=\"dropdown-divider\"></div>
-                            <a href=\"{{path('app_logout')}}\" class=\"dropdown-item\">Déconnexion</a>
-                        </div>
-                    </li>
+                        </ul>
+                        <ul class=\"navbar-nav ml-auto\">
+                            {% if app.user %} {# si je suis connecté #}
+                            <li class=\"nav-item dropdown\">
+                                <a href=\"#\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" id=\"accountDropdownLink\">
+                                    <img src=\"{{app.user.picture}}\" alt=\"Avatar de {{app.user.fullName}}\" class=\"avatar avatar-mini\">
+                                    {{app.user.fullName}}
+                                </a>
+                                <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledy=\"accountDopdownLink\">
+                                    <a href=\"{{path('account_index')}}\" class=\"dropdown-item\">Mon compte</a>
+                                    <a href=\"{{path('account_bookings')}}\" class=\"dropdown-item\">Mes réservations</a>
+                                    <a href=\"{{path('account_profile')}}\" class=\"dropdown-item\">Modifier mon profil</a>
+                                    <a href=\"{{path('account_password')}}\" class=\"dropdown-item\">Modifier mon mot de passe</a>  
+                                                
+                                    <a class=\"dropdown-item\" href=\"{{path('ads_create')}}\">Créer une nouvelle annonce</a>
+                                    <div class=\"dropdown-divider\"></div>
+                                    <a href=\"{{path('app_logout')}}\" class=\"dropdown-item\">Déconnexion</a>
+                                </div>
+                            </li>
 
-                    {% else %}
-                    <li class=\"nav-item\">
-                        <a href=\"{{ path('register') }}\" class=\"nav-link\">Inscription</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a href=\"{{ path('app_login') }}\" class=\"nav-link\">Connexion</a>
-                    </li>
+                            {% else %}
+                            <li class=\"nav-item\">
+                                <a href=\"{{ path('register') }}\" class=\"nav-link\">Inscription</a>
+                            </li>
+                            <li class=\"nav-item\">
+                                <a href=\"{{ path('app_login') }}\" class=\"nav-link\">Connexion</a>
+                            </li>
 
-                    {% endif %}
-                </ul>
-                
-            </div>
-        </nav>
+                            {% endif %}
+                        </ul>
+                        
+                    </div>
+                </nav>
+        
+        </div>
+        </div>
+    
 
 
 {# permet d'affiche les flashs dans le header #}
@@ -258,6 +270,7 @@ class __TwigTemplate_bf6c59d1a203d90b12f5bfa6bd82c58d619396d3d27a46dbb236d536373
                     {% endfor %}
                 </div>
             </div>
-        {% endfor %}", "partials/header.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/partials/header.html.twig");
+        {% endfor %}
+", "partials/header.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/partials/header.html.twig");
     }
 }
