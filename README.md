@@ -13,7 +13,7 @@ Dans le cadre de ce projet, j'ai été amené à utiliser et étudier les notion
 -	Les injections de dépendances
 -	Les formulaires de SYMFONY (formBuilder)
 -	Les utilisateurs et l’authentification dans SYMFONY
--	La sécurité et l’authentification dans SYMFONY
+-	La sécurité et les autorisations dans SYMFONY
 -	Gérer les pages d’erreur dans SYMFONY
 -	Création d’une interface administration 
 -	Le DQL
