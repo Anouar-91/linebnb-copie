@@ -13,7 +13,6 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/ads' => [[['_route' => 'ads_index', '_controller' => 'App\\Controller\\AdController::index'], null, null, null, false, false, null]],
         '/ads/new' => [[['_route' => 'ads_create', '_controller' => 'App\\Controller\\AdController::create'], null, null, null, false, false, null]],
         '/admin/login' => [[['_route' => 'admin_account_login', '_controller' => 'App\\Controller\\AdminAccountController::login'], null, null, null, false, false, null]],
         '/admin/logout' => [[['_route' => 'admin_account_logout', '_controller' => 'App\\Controller\\AdminAccountController::logout'], null, null, null, false, false, null]],
@@ -45,44 +44,47 @@ return [
                     .')'
                 .')'
                 .'|/ad(?'
-                    .'|s/([^/]++)(?'
-                        .'|/(?'
-                            .'|edit(*:196)'
-                            .'|delete(*:210)'
-                            .'|book(*:222)'
+                    .'|s(?'
+                        .'|(?:/(\\d+))?(*:190)'
+                        .'|/([^/]++)(?'
+                            .'|/(?'
+                                .'|edit(*:218)'
+                                .'|delete(*:232)'
+                                .'|book(*:244)'
+                            .')'
+                            .'|(*:253)'
                         .')'
-                        .'|(*:231)'
                     .')'
                     .'|min/(?'
                         .'|ads(?'
-                            .'|(?:/(\\d+))?(*:264)'
+                            .'|(?:/(\\d+))?(*:287)'
                             .'|/([^/]++)/(?'
-                                .'|edit(*:289)'
-                                .'|delete(*:303)'
+                                .'|edit(*:312)'
+                                .'|delete(*:326)'
                             .')'
                         .')'
                         .'|bookings/(?'
-                            .'|(\\d+)(*:330)'
+                            .'|(\\d+)(*:353)'
                             .'|([^/]++)/(?'
-                                .'|edit(*:354)'
-                                .'|delete(*:368)'
+                                .'|edit(*:377)'
+                                .'|delete(*:391)'
                             .')'
                         .')'
                         .'|comment(?'
-                            .'|(?:/(\\d+))?(*:399)'
+                            .'|(?:/(\\d+))?(*:422)'
                             .'|/([^/]++)/(?'
-                                .'|edit(*:424)'
-                                .'|delete(*:438)'
+                                .'|edit(*:447)'
+                                .'|delete(*:461)'
                             .')'
                         .')'
                         .'|user(?'
-                            .'|(?:/(\\d+))?(*:466)'
-                            .'|/([^/]++)/edit(*:488)'
+                            .'|(?:/(\\d+))?(*:489)'
+                            .'|/([^/]++)/edit(*:511)'
                         .')'
                     .')'
                 .')'
-                .'|/booking/([^/]++)(*:516)'
-                .'|/user/([^/]++)(*:538)'
+                .'|/booking/([^/]++)(*:539)'
+                .'|/user/([^/]++)(*:561)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -93,23 +95,24 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        196 => [[['_route' => 'ads_edit', '_controller' => 'App\\Controller\\AdController::edit'], ['slug'], null, null, false, false, null]],
-        210 => [[['_route' => 'ads_delete', '_controller' => 'App\\Controller\\AdController::delete'], ['slug'], null, null, false, false, null]],
-        222 => [[['_route' => 'booking_create', '_controller' => 'App\\Controller\\BookingController::book'], ['slug'], null, null, false, false, null]],
-        231 => [[['_route' => 'ads_show', '_controller' => 'App\\Controller\\AdController::show'], ['slug'], null, null, false, true, null]],
-        264 => [[['_route' => 'admin_ads_index', 'page' => 1, '_controller' => 'App\\Controller\\AdminAdController::index'], ['page'], null, null, false, true, null]],
-        289 => [[['_route' => 'admin_ads_edit', '_controller' => 'App\\Controller\\AdminAdController::edit'], ['id'], null, null, false, false, null]],
-        303 => [[['_route' => 'admin_ads_delete', '_controller' => 'App\\Controller\\AdminAdController::delete'], ['id'], null, null, false, false, null]],
-        330 => [[['_route' => 'admin_booking_index', '_controller' => 'App\\Controller\\AdminBookingController::index'], ['page'], null, null, false, true, null]],
-        354 => [[['_route' => 'admin_booking_edit', '_controller' => 'App\\Controller\\AdminBookingController::edit'], ['id'], null, null, false, false, null]],
-        368 => [[['_route' => 'admin_booking_delete', '_controller' => 'App\\Controller\\AdminUserController::delete'], ['id'], null, null, false, false, null]],
-        399 => [[['_route' => 'admin_comment_index', 'page' => 1, '_controller' => 'App\\Controller\\AdminCommentController::index'], ['page'], null, null, false, true, null]],
-        424 => [[['_route' => 'admin_comment_edit', '_controller' => 'App\\Controller\\AdminCommentController::edit'], ['id'], null, null, false, false, null]],
-        438 => [[['_route' => 'admin_comment_delete', '_controller' => 'App\\Controller\\AdminCommentController::delete'], ['id'], null, null, false, false, null]],
-        466 => [[['_route' => 'admin_user_index', 'page' => 1, '_controller' => 'App\\Controller\\AdminUserController::index'], ['page'], null, null, false, true, null]],
-        488 => [[['_route' => 'admin_user_edit', '_controller' => 'App\\Controller\\AdminUserController::edit'], ['id'], null, null, false, false, null]],
-        516 => [[['_route' => 'booking_show', '_controller' => 'App\\Controller\\BookingController::show'], ['id'], null, null, false, true, null]],
-        538 => [
+        190 => [[['_route' => 'ads_index', 'page' => 1, '_controller' => 'App\\Controller\\AdController::index'], ['page'], null, null, false, true, null]],
+        218 => [[['_route' => 'ads_edit', '_controller' => 'App\\Controller\\AdController::edit'], ['slug'], null, null, false, false, null]],
+        232 => [[['_route' => 'ads_delete', '_controller' => 'App\\Controller\\AdController::delete'], ['slug'], null, null, false, false, null]],
+        244 => [[['_route' => 'booking_create', '_controller' => 'App\\Controller\\BookingController::book'], ['slug'], null, null, false, false, null]],
+        253 => [[['_route' => 'ads_show', '_controller' => 'App\\Controller\\AdController::show'], ['slug'], null, null, false, true, null]],
+        287 => [[['_route' => 'admin_ads_index', 'page' => 1, '_controller' => 'App\\Controller\\AdminAdController::index'], ['page'], null, null, false, true, null]],
+        312 => [[['_route' => 'admin_ads_edit', '_controller' => 'App\\Controller\\AdminAdController::edit'], ['id'], null, null, false, false, null]],
+        326 => [[['_route' => 'admin_ads_delete', '_controller' => 'App\\Controller\\AdminAdController::delete'], ['id'], null, null, false, false, null]],
+        353 => [[['_route' => 'admin_booking_index', '_controller' => 'App\\Controller\\AdminBookingController::index'], ['page'], null, null, false, true, null]],
+        377 => [[['_route' => 'admin_booking_edit', '_controller' => 'App\\Controller\\AdminBookingController::edit'], ['id'], null, null, false, false, null]],
+        391 => [[['_route' => 'admin_booking_delete', '_controller' => 'App\\Controller\\AdminUserController::delete'], ['id'], null, null, false, false, null]],
+        422 => [[['_route' => 'admin_comment_index', 'page' => 1, '_controller' => 'App\\Controller\\AdminCommentController::index'], ['page'], null, null, false, true, null]],
+        447 => [[['_route' => 'admin_comment_edit', '_controller' => 'App\\Controller\\AdminCommentController::edit'], ['id'], null, null, false, false, null]],
+        461 => [[['_route' => 'admin_comment_delete', '_controller' => 'App\\Controller\\AdminCommentController::delete'], ['id'], null, null, false, false, null]],
+        489 => [[['_route' => 'admin_user_index', 'page' => 1, '_controller' => 'App\\Controller\\AdminUserController::index'], ['page'], null, null, false, true, null]],
+        511 => [[['_route' => 'admin_user_edit', '_controller' => 'App\\Controller\\AdminUserController::edit'], ['id'], null, null, false, false, null]],
+        539 => [[['_route' => 'booking_show', '_controller' => 'App\\Controller\\BookingController::show'], ['id'], null, null, false, true, null]],
+        561 => [
             [['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::index'], ['slug'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

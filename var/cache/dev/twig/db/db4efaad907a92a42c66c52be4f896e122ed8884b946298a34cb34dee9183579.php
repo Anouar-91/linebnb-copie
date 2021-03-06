@@ -126,7 +126,11 @@ class __TwigTemplate_aad56b195366982fbd0addc87100b24e4ba6734dcce05dbb1d01039f9cf
         // line 12
         echo "    
     </div>
-</div>
+     ";
+        // line 14
+        $this->loadTemplate("admin/partials/pagination.html.twig", "ad/index.html.twig", 14)->display(twig_array_merge($context, ["route" => "ads_index"]));
+        // line 15
+        echo "</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -148,7 +152,7 @@ class __TwigTemplate_aad56b195366982fbd0addc87100b24e4ba6734dcce05dbb1d01039f9cf
 
     public function getDebugInfo()
     {
-        return array (  127 => 12,  113 => 11,  110 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  133 => 15,  131 => 14,  127 => 12,  113 => 11,  110 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -166,6 +170,7 @@ class __TwigTemplate_aad56b195366982fbd0addc87100b24e4ba6734dcce05dbb1d01039f9cf
         {% endfor %}
     
     </div>
+     {% include 'admin/partials/pagination.html.twig' with {'route' : 'ads_index'}%}
 </div>
 {% endblock %}
 ", "ad/index.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/ad/index.html.twig");
