@@ -20,15 +20,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AdController extends AbstractController
 {
     /**
-     * @Route("/ads", name="ads_index")
+     * @Route("/ads/{page}", name="ads_index", requirements={"page": "\d+"})
      */
-    public function index(AdRepository $repo): Response
+    public function index(AdRepository $repo, $page = 1): Response
     {
+            // Permet de faire la pagination
+            $limit = 9;
+            $start = $page * $limit - $limit;
+            $total = count($repo->findAll());
+            $pages = ceil($total / $limit);
        /*  $repo = $this->getDoctrine()->getRepository(Ad::class); */ // cette ligne me permet de récupérer le repository qui gère les annonces.
 
-        $ads = $repo->findAll(); //fonction findall() du repository permet de récupérer tous les enregistrements de la table visée
         return $this->render('ad/index.html.twig', [
-            'ads' => $ads,
+            
+                'ads' => $repo->findBy([], [],$limit, $start),
+                'pages' => $pages,
+                'page' => $page
         ]);
     }
 
