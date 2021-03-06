@@ -126,61 +126,11 @@ class __TwigTemplate_aad56b195366982fbd0addc87100b24e4ba6734dcce05dbb1d01039f9cf
         // line 12
         echo "    
     </div>
-  
-    <div class=\"d-flex justify-content-center\">
-        <ul class=\"pagination\">
-            <li class=\"page-item ";
-        // line 17
-        if ((0 === twig_compare((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 17, $this->source); })()), 1))) {
-            echo "disabled";
-        }
-        echo "\">
-            <a class=\"page-link\" href=\"";
-        // line 18
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_index", ["page" => ((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 18, $this->source); })()) - 1)]), "html", null, true);
-        echo "\">&laquo;</a>
-            </li>
-            ";
-        // line 20
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["pages"]) || array_key_exists("pages", $context) ? $context["pages"] : (function () { throw new RuntimeError('Variable "pages" does not exist.', 20, $this->source); })())));
-        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 21
-            echo "                
-
-            <li class=\"page-item ";
-            // line 23
-            if ((0 === twig_compare((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 23, $this->source); })()), $context["i"]))) {
-                echo " active ";
-            }
-            echo "\">
-                <a class=\"page-link\" href=\"";
-            // line 24
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_index", ["page" => $context["i"]]), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $context["i"], "html", null, true);
-            echo "</a>
-            </li>
-            ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
-        echo "
-            <li class=\"page-item ";
-        // line 28
-        if ((0 === twig_compare((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 28, $this->source); })()), (isset($context["pages"]) || array_key_exists("pages", $context) ? $context["pages"] : (function () { throw new RuntimeError('Variable "pages" does not exist.', 28, $this->source); })())))) {
-            echo "disabled";
-        }
-        echo "\">
-            <a class=\"page-link\" href=\"";
-        // line 29
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_index", ["page" => ((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 29, $this->source); })()) + 1)]), "html", null, true);
-        echo "\">&raquo;</a>
-            </li>
-        </ul>
-    </div>
+     ";
+        // line 14
+        $this->loadTemplate("admin/partials/pagination.html.twig", "ad/index.html.twig", 14)->display(twig_array_merge($context, ["route" => "ads_index"]));
+        // line 15
+        echo "     
 </div>
 ";
         
@@ -203,7 +153,7 @@ class __TwigTemplate_aad56b195366982fbd0addc87100b24e4ba6734dcce05dbb1d01039f9cf
 
     public function getDebugInfo()
     {
-        return array (  179 => 29,  173 => 28,  170 => 27,  159 => 24,  153 => 23,  149 => 21,  145 => 20,  140 => 18,  134 => 17,  127 => 12,  113 => 11,  110 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  133 => 15,  131 => 14,  127 => 12,  113 => 11,  110 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -221,25 +171,8 @@ class __TwigTemplate_aad56b195366982fbd0addc87100b24e4ba6734dcce05dbb1d01039f9cf
         {% endfor %}
     
     </div>
-  
-    <div class=\"d-flex justify-content-center\">
-        <ul class=\"pagination\">
-            <li class=\"page-item {% if page == 1 %}disabled{% endif%}\">
-            <a class=\"page-link\" href=\"{{path('ads_index', {'page' : page - 1})}}\">&laquo;</a>
-            </li>
-            {% for i in 1..pages %}
-                
-
-            <li class=\"page-item {% if page == i %} active {% endif %}\">
-                <a class=\"page-link\" href=\"{{path('ads_index', {'page' : i})}}\">{{i}}</a>
-            </li>
-            {% endfor %}
-
-            <li class=\"page-item {% if page == pages %}disabled{% endif%}\">
-            <a class=\"page-link\" href=\"{{path('ads_index', {'page' : page + 1})}}\">&raquo;</a>
-            </li>
-        </ul>
-    </div>
+     {% include 'admin/partials/pagination.html.twig' with {'route' : 'ads_index'}%}
+     
 </div>
 {% endblock %}
 ", "ad/index.html.twig", "/Applications/MAMP/htdocs/lineup-copie/templates/ad/index.html.twig");
